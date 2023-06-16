@@ -14,7 +14,7 @@ int Max(int args1, int args2, int args3)
     return resalt;
 }
 
-int[] array = {50,89,126};
+int[] array = {500,89,126};
 
 int resalt = Max(array[0], array[1], array[2]);
 
