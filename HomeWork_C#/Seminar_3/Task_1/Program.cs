@@ -29,9 +29,10 @@ if (num>9999 && num < 100000)
         sum = sum * 10 + remains;
     }
 
-    if (temp == num)
+    if (temp == sum)
+    {
     Console.WriteLine($"Число {temp} является палиндромом");
-    
+    }
     else
     Console.WriteLine($"Число {temp} не является палиндромом");
 }
