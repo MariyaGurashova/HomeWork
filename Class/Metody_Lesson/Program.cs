@@ -5,7 +5,7 @@ void TipeText()
     Console.WriteLine("Текст");
 }
 
-// TipeText();
+TipeText();
 
 // Метод 2 - ни чего не возвращает, но может принимать аргументы
 
@@ -14,7 +14,7 @@ void TipeText2(string msg)
     Console.WriteLine(msg);
 }
 
-// TipeText2(msg: "Текст сообщения");
+TipeText2(msg: "Текст сообщения");
 
 void TipeText21(string msg, int count)
 {
@@ -26,7 +26,7 @@ void TipeText21(string msg, int count)
     }
 }
 
-// TipeText21("Текст", 4);
+TipeText21("Текст", 4);
 // TipeText21(msg: "Текст", count: 4); "именованные аргументы" можно указывать в любом порядке
 // TipeText21(count: 4, msg: "Текст");
 
@@ -38,7 +38,7 @@ int Metod3()
 }
 
 int year = Metod3(); // указываем переменную, которой присваиваем значение метода
-// Console.WriteLine(year);
+Console.WriteLine(year);
 
 // Метод 4 - Что-то принимает, и что-то возвращает.
 
