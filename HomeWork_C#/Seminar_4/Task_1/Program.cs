@@ -3,10 +3,10 @@
 // 6, 1, 33 -> [6, 1, 33]
 
 
-void PrintArray()
-{
-    Console.Write($"Массив => ");
-}
+// void PrintArray()
+// {
+//     Console.Write($"Массив => ");
+// }
 
 void GetRandArr(int[] collection, int min, int max)
 {
@@ -21,6 +21,6 @@ void GetRandArr(int[] collection, int min, int max)
     Console.WriteLine($"[{string.Join(", ", collection)}]");
 }
 
-PrintArray();
+// PrintArray();
 int[] arr =  new int [8];
 GetRandArr(arr, 0, 89);
