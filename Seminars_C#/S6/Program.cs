@@ -5,21 +5,21 @@
 // треугольника меньше суммы двух других сторон.
 
 
-int RandomNum()
-{
-    Random rand = new Random();
-    int randomNum = rand.Next(1, 20);
-    return randomNum;
-}
+// int RandomNum()
+// {
+//     Random rand = new Random();
+//     int randomNum = rand.Next(1, 20);
+//     return randomNum;
+// }
 
-int a = RandomNum(), b = RandomNum(), c = RandomNum();
+// int a = RandomNum(), b = RandomNum(), c = RandomNum();
 
-bool CheckTriangle(int a, int b, int c){
-    if((a < (b + c)) && (b < (a + c)) && (c < (a + b))){
-        return true;
-    }
-    return false;
-}
+// bool CheckTriangle(int a, int b, int c){
+//     if((a < (b + c)) && (b < (a + c)) && (c < (a + b))){
+//         return true;
+//     }
+//     return false;
+// }
 
 // Console.WriteLine($"Triangle from {a}, {b}, {c} is {CheckTriangle(a, b, c)}.");
 
@@ -30,16 +30,16 @@ bool CheckTriangle(int a, int b, int c){
 2  -> 10
 */
 
-int number = 2;
-string GetNum(int number){
-    string count = String.Empty;
-    while(number > 0){
-        int result = number%2;
-        count = Convert.ToString(result) + count; // Перемена мест слагаемых (к символу прибавляем накапливаемый результат).
-        number = number/2;
-    }
-    return count;
-}
+// int number = 2;
+// string GetNum(int number){
+//     string count = String.Empty;
+//     while(number > 0){
+//         int result = number%2;
+//         count = Convert.ToString(result) + count; // Перемена мест слагаемых (к символу прибавляем накапливаемый результат).
+//         number = number/2;
+//     }
+//     return count;
+// }
 // Console.WriteLine($"Number {number} is {GetNum(number)}.");
 
 /*
@@ -59,16 +59,16 @@ Console.WriteLine(string.Join(", ", list));
 Console.WriteLine(list.Count); // Вернет размер списка.
 */
 
-List<int> GetFibonacci(int number){
-    List<int> list = new List<int>();
-    list.Add(0);
-    list.Add(1);
-    for (int i = 0; i < number - 2 ; i++)
-    {
-       list.Add((list[list.Count - 1]) + (list[list.Count - 2])); 
-    }
-    return list;
-}
+// List<int> GetFibonacci(int number){
+//     List<int> list = new List<int>();
+//     list.Add(0);
+//     list.Add(1);
+//     for (int i = 0; i < number - 2 ; i++)
+//     {
+//        list.Add((list[list.Count - 1]) + (list[list.Count - 2])); 
+//     }
+//     return list;
+// }
 // Console.WriteLine($"Ряд чисел Фибоначчи {string.Join(", ", GetFibonacci(3))}");
 
 /*
@@ -155,28 +155,28 @@ Console.WriteLine(answer);
 // массива с помощью поэлементного копирования.
 
 
-int[] CreateArray(int size, int min, int max){
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++){
-        array[i] = new Random().Next(min, max+1);
-    }
-    return array;
-}
+// int[] CreateArray(int size, int min, int max){
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min, max+1);
+//     }
+//     return array;
+// }
 
-int[] array = CreateArray(5, 0, 10);
-Console.WriteLine($"Our list [{string.Join(", ", array)}]");
+// int[] array = CreateArray(5, 0, 10);
+// Console.WriteLine($"Our list [{string.Join(", ", array)}]");
 
 
-int[] CopyArray (int[] array){
-    int[] copyArray = new int[array.Length];
-    for(int i = 0; i < array.Length; i++){
-        copyArray[i] = array[i];
-    }
-    return copyArray;
-}
+// int[] CopyArray (int[] array){
+//     int[] copyArray = new int[array.Length];
+//     for(int i = 0; i < array.Length; i++){
+//         copyArray[i] = array[i];
+//     }
+//     return copyArray;
+// }
 
-int[] copyArray = CopyArray(array);
-Console.WriteLine($"Copy list[{string.Join(", ", copyArray)}]");
+// int[] copyArray = CopyArray(array);
+// Console.WriteLine($"Copy list[{string.Join(", ", copyArray)}]");
 
 
 // Не используя рекурсию, выведите первые N чисел Фибоначчи. 
@@ -186,29 +186,29 @@ Console.WriteLine($"Copy list[{string.Join(", ", copyArray)}]");
 // Если N = 7 -> 0 1 1 2 3 5 8
 
 
-Console.Clear();
-int GetNumber(string description){
+// Console.Clear();
+// int GetNumber(string description){
 
-    int number;
-    Console.WriteLine($"{description} => ");
+//     int number;
+//     Console.WriteLine($"{description} => ");
 
-    while(true){
-        string temp = Console.ReadLine();
-        if(int.TryParse(temp, out number)){
-            return number;
-        }
-        Console.Write($"This number {temp} is not correct. Try again. => ");
-    }
+//     while(true){
+//         string temp = Console.ReadLine();
+//         if(int.TryParse(temp, out number)){
+//             return number;
+//         }
+//         Console.Write($"This number {temp} is not correct. Try again. => ");
+//     }
     
-}
-int n = GetNumber("Input number: ");
+// }
+// int n = GetNumber("Input number: ");
 
-List<int> list = new List<int>();
-list.Add(0);
-list.Add(1);
+// List<int> list = new List<int>();
+// list.Add(0);
+// list.Add(1);
 
-for(int i = 2; i < n; i++){
-    list.Add(list[i-1]+list[i-2]);
-}
+// for(int i = 2; i < n; i++){
+//     list.Add(list[i-1]+list[i-2]);
+// }
 
 // Console.WriteLine($"[{string.Join(", ", list)}]");
