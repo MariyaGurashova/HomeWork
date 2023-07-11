@@ -6,6 +6,16 @@
 18 20
 15 18 */
 
+// А = (A11 A12)   B = (B11 B12)  C = A*B
+//     (A21 A22)       (B21 B22)
+
+// C = (A11 * B11 + A12 * B21 || A11 * B12 + A12 * B22) C = (C11 C12)
+//     (A21 * B11 + A22 * B21 || A21 * B12 + A22 * B22)     (C21 C22)
+
+//     2*3 + 4*3 = 18 [0,0]
+//     2*4 + 4*3 = 20 [0,1]
+//     3*3 + 2*3 = 15 [1,0]
+//     3*4 + 2*3 = 18 [1,1]
 
 void PrintArray(int[,] arr)
 {
@@ -42,6 +52,9 @@ void FillSecondArray(int[,] arr, int min, int max)
         }
     }
 }
+
+// с подсчетом разобралась, но решение не мое
+
 
 void MultiplyMatrix(int[,] firstArray, int[,] secondArray, int[,] resultMatrix)
 {
