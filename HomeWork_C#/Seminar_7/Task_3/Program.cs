@@ -42,7 +42,7 @@ void GetAvg(int[,] array)
         {
             sum = sum + array[i, j];
         }
-        Console.Write($"{sum / (i):F2}; ");
+        Console.Write($"{(sum / i):F2}; ");
     }
 }
 
